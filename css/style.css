@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --peacock-dark: #054a57;
+  --peacock-teal: #0e8c7a;
+  --gold: #c9a84c;
+  --cream: #f5ede0;
+  --warm-white: #faf6f0;
+  --ink: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--warm-white);
+  color: var(--ink);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  height: 68px;
+  background: var(--warm-white);
+  border-bottom: 1px solid rgba(10,107,124,0.15);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--peacock-dark);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--peacock-teal);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-cta {
+  background: var(--peacock-dark);
+  color: var(--cream) !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+}
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 5%;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(10, 107, 124, 0.1);
+  color: var(--peacock-dark);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--peacock-dark);
+  margin-bottom: 1.2rem;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--peacock-teal);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+  background: var(--peacock-dark);
+  color: var(--cream);
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--peacock-dark);
+  border: 1.5px solid var(--peacock-dark);
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.platforms-strip {
+  background: var(--peacock-dark);
+  padding: 1.2rem 5%;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  overflow-x: auto;
+}
+
+.strip-label {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.platform-pill {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.platform-pill:hover {
+  color: var(--gold);
+}
+.categories-section {
+  padding: 4rem 5%;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--peacock-dark);
+}
+
+.see-all {
+  color: var(--peacock-teal);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--peacock-teal);
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.cat-card {
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.cat-card:hover {
+  transform: translateY(-6px);
+}
+
+.cat-emoji {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.cat-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.cat-card p {
+  font-size: 0.78rem;
+  opacity: 0.8;
+}
+
+.cat-fashion { background: linear-gradient(135deg, #0a6b7c, #0e8c7a); }
+.cat-beauty  { background: linear-gradient(135deg, #c9a84c, #b87333); }
+.cat-gadgets { background: linear-gradient(135deg, #1a5c3a, #2e7d5e); }
+.cat-home    { background: linear-gradient(135deg, #5c3a1a, #8b5e3c); }
+.cat-sports  { background: linear-gradient(135deg, #1a3a5c, #2e5d8b); }
+.deals-section {
+  padding: 4rem 5%;
+  background: var(--cream);
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.deal-tile {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(10,107,124,0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.deal-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+
+.deal-img {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+}
+
+.deal-img-fashion { background: linear-gradient(135deg, #a8d8d0, #e8f6f4); }
+.deal-img-beauty  { background: linear-gradient(135deg, #f5deb3, #faf0e6); }
+.deal-img-gadget  { background: linear-gradient(135deg, #c8dfc8, #e8f5e8); }
+
+.deal-body { padding: 1rem; }
+
+.deal-platform {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--peacock-teal);
+  margin-bottom: 0.3rem;
+}
+
+.deal-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: var(--ink);
+}
+
+.deal-prices {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-new {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--peacock-dark);
+}
+
+.price-old {
+  font-size: 0.85rem;
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.price-off {
+  margin-left: auto;
+  background: #e8f8f0;
+  color: #1a5c3a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.6);
+  padding: 2.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .logo {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+footer .logo span {
+  color: var(--peacock-light, #a8d8d0);
+}
+
+footer p {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+} 
