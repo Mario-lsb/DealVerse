@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
 <nav>
   <a href="index.html" class="logo">Deal<span>Verse</span></a>
-
   <ul class="nav-links">
     <li><a href="#">Fashion</a></li>
     <li><a href="#">Beauty</a></li>
@@ -18,6 +18,7 @@
     <li><a href="#" class="nav-cta">Sign Up Free</a></li>
   </ul>
 </nav>
+
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">India's smartest deal finder</div>
@@ -29,6 +30,7 @@
     </div>
   </div>
 </section>
+
 <div class="platforms-strip">
   <span class="strip-label">Live on</span>
   <div class="platform-pill">💄 Nykaa</div>
@@ -40,100 +42,56 @@
   <div class="platform-pill">📱 Croma</div>
   <div class="platform-pill">➕ Add Yours</div>
 </div>
+
+<div class="search-section">
+  <input type="text" id="searchInput" placeholder="Search kurta, lipstick, earphones..." />
+  <button onclick="searchDeals()">Search →</button>
+</div>
+
 <section class="categories-section">
   <div class="section-header">
     <h2>Categories</h2>
     <a href="#" class="see-all">View all →</a>
   </div>
   <div class="categories-grid">
-    <div class="cat-card cat-fashion">
+    <div class="cat-card cat-fashion" onclick="filterDeals('fashion')">
       <span class="cat-emoji">👗</span>
       <h3>Fashion</h3>
       <p>240+ deals</p>
     </div>
-    <div class="cat-card cat-beauty">
+    <div class="cat-card cat-beauty" onclick="filterDeals('beauty')">
       <span class="cat-emoji">💄</span>
       <h3>Beauty</h3>
       <p>185+ deals</p>
     </div>
-    <div class="cat-card cat-gadgets">
+    <div class="cat-card cat-gadgets" onclick="filterDeals('gadgets')">
       <span class="cat-emoji">📱</span>
       <h3>Gadgets</h3>
       <p>130+ deals</p>
     </div>
-    <div class="cat-card cat-home">
+    <div class="cat-card cat-home" onclick="filterDeals('home')">
       <span class="cat-emoji">🏡</span>
       <h3>Home & Living</h3>
       <p>95+ deals</p>
     </div>
-    <div class="cat-card cat-sports">
+    <div class="cat-card cat-sports" onclick="filterDeals('sports')">
       <span class="cat-emoji">🏃</span>
       <h3>Sports</h3>
       <p>70+ deals</p>
     </div>
   </div>
 </section>
+
 <section class="deals-section">
   <div class="section-header">
     <h2>Featured Deals</h2>
     <a href="#" class="see-all">See all →</a>
   </div>
-  <div class="deals-grid">
-
-    <div class="deal-tile">
-      <div class="deal-img deal-img-fashion">👗</div>
-      <div class="deal-body">
-        <div class="deal-platform">Myntra</div>
-        <div class="deal-name">Libas Women's Kurta Set</div>
-        <div class="deal-prices">
-          <span class="price-new">₹799</span>
-          <span class="price-old">₹1,999</span>
-          <span class="price-off">60% OFF</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="deal-tile">
-      <div class="deal-img deal-img-beauty">💄</div>
-      <div class="deal-body">
-        <div class="deal-platform">Nykaa</div>
-        <div class="deal-name">Lakme Foundation + Compact</div>
-        <div class="deal-prices">
-          <span class="price-new">₹549</span>
-          <span class="price-old">₹899</span>
-          <span class="price-off">39% OFF</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="deal-tile">
-      <div class="deal-img deal-img-gadget">📱</div>
-      <div class="deal-body">
-        <div class="deal-platform">Amazon</div>
-        <div class="deal-name">boAt Airdopes 141 TWS</div>
-        <div class="deal-prices">
-          <span class="price-new">₹999</span>
-          <span class="price-old">₹2,990</span>
-          <span class="price-off">67% OFF</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="deal-tile">
-      <div class="deal-img deal-img-fashion">👠</div>
-      <div class="deal-body">
-        <div class="deal-platform">Zara</div>
-        <div class="deal-name">Structured Blazer — EOSS</div>
-        <div class="deal-prices">
-          <span class="price-new">₹2,490</span>
-          <span class="price-old">₹4,990</span>
-          <span class="price-off">50% OFF</span>
-        </div>
-      </div>
-    </div>
-
+  <div class="deals-grid" id="dealsGrid">
+    <!-- deals will be injected by JS -->
   </div>
 </section>
+
 <footer>
   <div class="footer-left">
     <a href="index.html" class="logo">Deal<span>Verse</span></a>
@@ -143,5 +101,7 @@
     <p>© 2026 DealVerse — Made with 🦚 for India</p>
   </div>
 </footer>
+
+<script src="js/main.js"></script>
 </body>
-</html> 
+</html>
